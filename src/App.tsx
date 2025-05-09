@@ -1,9 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import HomePage from "./pages/Home"
+
 export default function App(){
   return(
-    <>
-      <div className="flex items-center justify-center h-screen">
-        <p className="text-[50px]">Hello LnwGum</p>
-      </div>
-    </>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Layout>
+    </Router>
   )
 }
